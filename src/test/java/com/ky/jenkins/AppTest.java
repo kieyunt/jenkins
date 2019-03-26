@@ -1,38 +1,47 @@
 package com.ky.jenkins;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+public class AppTest {
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+	private static String Base_Url = "https://www.facebook.com";
+	private WebDriver driver;
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	@Before
+	public void setUp() {
+		driver = new ChromeDriver();
+		driver.get(Base_Url);
+	}
+
+	@After
+	public void after() {
+		driver.quit();
+	}
+
+	@Test
+	public void testCasePassed() {
+		Assert.assertTrue(driver.findElement(By.xpath("//form[@id='login_form']")).isDisplayed());
+	}
+
+	@Test
+	public void testCaseFailed() {
+		Assert.assertTrue(driver.findElement(By.xpath("//form[@id='failed case']")).isDisplayed());
+	}
+
+	@Ignore
+	@Test
+	public void testCaseIgnored() {
+		Assert.assertTrue(driver.findElement(By.xpath("//form[@id='ignored case']")).isDisplayed());
+	}
+
 }
