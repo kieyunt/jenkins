@@ -35,7 +35,7 @@ public class AppTest {
 	
 	@Test 
 	public void testCaseSuccess() {
-		Assert.assertTrue(true);
+		Assert.assertTrue(true); 
 	}
 
 	@Test
