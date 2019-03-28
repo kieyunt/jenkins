@@ -32,6 +32,11 @@ public class AppTest {
 	public void testCasePassed() {
 		Assert.assertTrue(driver.findElement(By.xpath("//form[@id='login_form']")).isDisplayed());
 	}
+	
+	@Test 
+	public void testCaseSuccess() {
+		Assert.assertTrue(true);
+	}
 
 	@Test
 	public void testCaseFailed() {
