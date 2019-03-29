@@ -9,10 +9,6 @@ public class Java8Tester {
 		Java8Tester tester = new Java8Tester();
 		tester.sort();
 		tester.mathAndGreet();
-		
-		StringBuffer sb = new StringBuffer();
-		sb.append("hello" );
-		System.out.println(sb.toString());
 	}
 
 	private void sort() {
