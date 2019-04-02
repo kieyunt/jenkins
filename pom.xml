@@ -6,7 +6,7 @@
 	<groupId>com.ky</groupId>
 	<artifactId>jenkins</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>ear</packaging>
 
 	<name>jenkins</name>
 	<url>http://maven.apache.org</url>
