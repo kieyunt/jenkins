@@ -15,6 +15,44 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<version>1.2.0</version>
+				<configuration>
+					<container>
+						<containerId>jboss71x</containerId>
+						<home>C:\ePerolehanDemo\liferay-portal-6.1.1-ce-ga2\jboss-7.1.1</home>
+						<timeout>600000</timeout>
+						<append>false</append>
+					</container>
+					<configuration>
+						<type>existing</type>
+						<home>C:\ePerolehanDemo\liferay-portal-6.1.1-ce-ga2\jboss-7.1.1\server\default</home>
+						<properties>
+							<cargo.servlet.port>8079</cargo.servlet.port>
+							<cargo.jboss.configuration>default</cargo.jboss.configuration>
+							<cargo.hostname>localhost</cargo.hostname>
+							<cargo.rmi.port>1099</cargo.rmi.port>
+						</properties>
+					</configuration>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
