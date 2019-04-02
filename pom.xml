@@ -40,9 +40,9 @@
 					</container>
 					<configuration>
 						<type>existing</type>
-						<home>C:\ePerolehanDemo\liferay-portal-6.1.1-ce-ga2\jboss-7.1.1\server\default</home>
+						<home>C:\ePerolehanDemo\liferay-portal-6.1.1-ce-ga2\jboss-7.1.1\standalone</home>
 						<properties>
-							<cargo.servlet.port>8079</cargo.servlet.port>
+							<cargo.servlet.port>8090</cargo.servlet.port>
 							<cargo.jboss.configuration>default</cargo.jboss.configuration>
 							<cargo.hostname>localhost</cargo.hostname>
 							<cargo.rmi.port>1099</cargo.rmi.port>
