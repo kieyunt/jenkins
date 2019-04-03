@@ -50,6 +50,31 @@
 					</configuration>
 				</configuration>
 			</plugin>
+			<!-- 
+	  		<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-install-plugin</artifactId>
+			    <version>2.3.1</version>
+			    <executions>
+			        <execution>
+			            <id>install-bpm-wlfullclient</id>
+			            <goals>
+			                <goal>install-file</goal>
+			            </goals>
+			            <phase>clean</phase>
+			            <configuration>
+			                <groupId>com.ac.bpm</groupId>
+			                <artifactId>wlfullclient</artifactId>
+			                <version>0.0.1</version>
+			                <packaging>jar</packaging>
+			                <generatePom>true</generatePom>
+			                <createChecksum>true</createChecksum>
+			                <file>${project.basedir}/lib/wlfullclient.jar</file>
+			            </configuration>
+			        </execution>
+			    </executions>
+			</plugin>  	 
+			 -->
 		</plugins>
 	</build>
 
@@ -60,9 +85,24 @@
 			<version>4.12</version>
 		</dependency>
 		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>		
+		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>3.10.0</version>
 		</dependency>
+		<dependency>
+		    <groupId>com.ac.bpm</groupId>
+		    <artifactId>NGeP-bpmBaseClient</artifactId>
+		    <version>0.0.1</version>
+		</dependency>	 	
+		<dependency>
+		    <groupId>com.ac.bpm</groupId>
+		    <artifactId>wlfullclient</artifactId>
+		    <version>0.0.1</version>
+		</dependency>			
 	</dependencies>
 </project>
