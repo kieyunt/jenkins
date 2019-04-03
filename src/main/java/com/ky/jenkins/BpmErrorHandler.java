@@ -150,8 +150,8 @@ public class BpmErrorHandler {
 		try {
 			String interfaceName = "IR" + argName.substring(1, argName.length());
 			String str = argName + "#" + argClazz.getPackage().getName() + "." + interfaceName;
-			System.out.println("interfaceName =" + interfaceName);
-			System.out.println("str =" + str);
+			log.info("interfaceName =" + interfaceName);
+			log.info("str =" + str);
 			EpBpmAction sampleAction = new EpBpmAction(str, initContext);
 			iGenericSO = (IGenericSO) weblogic.security.Security.runAs(subject, sampleAction);
 		} catch (Exception ex) {
