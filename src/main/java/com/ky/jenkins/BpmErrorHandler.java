@@ -47,16 +47,17 @@ public class BpmErrorHandler {
 	final static Logger log = Logger.getLogger(BpmErrorHandler.class);
 
 	public void refireFLErrorHandlerTask() {
-		log.info("Start refireFLErrorHandlerTask()"); 
 		refireErrorHandlerTask("FL");
+		log.info("########################################"); 
 	}
 
 	public void refireCTErrorHandlerTask() {
-		log.info("Start refireCTErrorHandlerTask()");
 		refireErrorHandlerTask("CT");
+		log.info("########################################");
 	}
 
 	private void refireErrorHandlerTask(String moduleCode) {
+		log.info("Start refireErrorHandlerTask() for "+moduleCode); 
 		bpmSO = (IBpmSO) getServiceObject(IBpmSO.class);
 		String loginId = "cdcadmin";
 		BpmRequestDTO reqDTO = new BpmRequestDTO();
