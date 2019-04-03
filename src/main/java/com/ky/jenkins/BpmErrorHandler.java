@@ -47,10 +47,12 @@ public class BpmErrorHandler {
 	final static Logger log = Logger.getLogger(BpmErrorHandler.class);
 
 	public void refireFLErrorHandlerTask() {
+		log.info("Start refireFLErrorHandlerTask()"); 
 		refireErrorHandlerTask("FL");
 	}
 
 	public void refireCTErrorHandlerTask() {
+		log.info("Start refireCTErrorHandlerTask()");
 		refireErrorHandlerTask("CT");
 	}
 
