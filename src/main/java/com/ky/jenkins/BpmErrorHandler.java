@@ -48,12 +48,10 @@ public class BpmErrorHandler {
 
 	public void refireFLErrorHandlerTask() {
 		refireErrorHandlerTask("FL");
-		log.info("########################################"); 
 	}
 
 	public void refireCTErrorHandlerTask() {
 		refireErrorHandlerTask("CT");
-		log.info("########################################");
 	}
 
 	private void refireErrorHandlerTask(String moduleCode) {
